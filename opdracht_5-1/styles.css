@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ftltlt-webfont;
+}
+
+
+.stage {  
+    position: relative;
+    cursor: pointer;
+   
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;    
+   overflow: hidden;    
+}
+
+.bannerSize{
+width: 300px;
+height: 250px;
+background-color: black;
+}
+
+.box{
+    width: 100px;
+    height: 30px;
+}
+
+.box1,
+.box2,
+.box3{
+width: 30px;
+height: 15px;
+position:absolute;
+left: 15px;
+top: 15px;
+}
+
+.box1{
+    position: absolute;
+    background-color: #9000ff;
+}
+
+.box2{
+    position: absolute;
+    background-color: #55559f;
+    left: 50px;
+
+}
+
+.box3{
+    position: absolute;
+    background-color: #b0b0eb;
+    left: 85px;
+}
+.titletext{
+    position:absolute;
+    color: white;
+    left: 15px;
+    top: 30px;
+}
+
+.hiImg{
+    position: absolute;
+    width: 30px;
+    height: auto;
+    top: 33px;
+    left: 100px;
+}
+
+.subText{
+    position:absolute;
+    left: 15px;
+    top: 80px;
+    color: white;
+}
+
+.productText{
+    position:absolute;
+    left: 15px;
+    top: 115px;
+    color: white;
+}
+
+.stage {  
+    position: relative;
+    cursor: pointer;
+   
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;    
+   overflow: hidden;    
+}
+
+.bannerSize{
+width: 300px;
+height: 250px;
+}
+.sImImg{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 60px;
+    height: auto;
+}
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #7272dd;
+    bottom: -220px;
+    right: -100px;
+    border-radius: 50%;
+}
+.btn{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 15px;
+    right: 20px;
+    background-color: rgb(115, 115, 221,0);
+    border: 1px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btnText{
+    color: white;
+    font-size: 13px;
+}
+@font-face {
+    font-family: ftltlt-webfont;
+    src: url(Fonts/ftltlt-webfont.woff);
+}
