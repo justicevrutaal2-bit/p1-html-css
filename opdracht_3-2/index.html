@@ -1,0 +1,170 @@
+ 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnement afsluiten</title>
+</head>
+<body>
+    <h1>Vul je gegevens in</h1>
+
+    <form action="" method="post">
+        <label for="voornaam">Voornaam:</label><br>
+        <input 
+          type="text" 
+          id="voornaam" 
+          name="voornaam"
+          pattern="[A-Za-zÀ-ÿ\s-]+"
+          title="Gebruik alleen letters."
+          required>
+        <br><br>
+
+        <label for="achternaam">Achternaam:</label><br>
+        <input 
+          type="text" 
+          id="achternaam" 
+          name="achternaam"
+          pattern="[A-Za-zÀ-ÿ\s-]+"
+          title="Gebruik alleen letters."
+          required>
+        <br><br>
+
+        <label>Aanhef:</label><br>
+        <input type="radio" id="dhr" name="aanhef" value="Dhr." checked>
+        <label for="dhr">Dhr.</label>
+        <input type="radio" id="mevr" name="aanhef" value="Mevr.">
+        <label for="mevr">Mevr.</label>
+        <input type="radio" id="anders" name="aanhef" value="Anders">
+        <label for="anders">Anders</label>
+        <br><br>
+
+        <label for="straat_huisnummer">Straat met huisnummer:</label><br>
+        <input 
+          type="text" 
+          id="straat_huisnummer" 
+          name="straat_huisnummer"
+          placeholder="Stationsweg 12" 
+          required>
+        <br><br>
+
+        <label for="postcode">Postcode:</label><br>
+        <input 
+          type="text" 
+          id="postcode" 
+          name="postcode"
+          placeholder="1234 AB"
+          maxlength="7"
+          pattern="[0-9]{4}\s?[A-Za-z]{2}"
+          style="text-transform: uppercase;"
+          required>
+        <br><br>
+
+        <label for="woonplaats">Woonplaats:</label><br>
+        <input 
+          type="text" 
+          id="woonplaats" 
+          name="woonplaats" 
+          placeholder="Bijv. Amsterdam" 
+          maxlength="50" 
+          pattern="[A-Za-zÀ-ÿ\s'-]+" 
+          autocomplete="address-level2"
+          required>
+        <br><br>
+
+        <label for="land">Kies een land:</label><br>
+        <select id="land" name="land" required>
+            <option value="netherlands">Nederland</option>
+            <option value="united_states">Verenigde Staten</option>
+            <option value="curacao">Curaçao</option>
+            <option value="ander">Ander</option>
+        </select>
+        <br>
+        <details>
+            <summary style="cursor: pointer; color: blue; text-decoration: underline;">Gekozen voor 'Ander'? Typ hier uw land</summary>
+            <label for="anderLand">Vul uw land in:</label>
+            <input type="text" id="anderLand" name="anderLand" placeholder="Type uw land hier">
+        </details>
+        <br>
+
+        <label for="iban">IBAN-nummer:</label><br>
+        <input 
+          type="text"
+          id="iban" 
+          name="iban"
+          placeholder="NL91ABNA0417164300"
+          maxlength="18"
+          minlength="18"
+          pattern="NL[0-9]{2}[A-Z]{4}[0-9]{10}"
+          inputmode="text"
+          autocomplete="bank-account"
+          style="text-transform: uppercase;"
+          required>
+        <br><br>
+
+        <label for="type_abonnement">Type abonnement:</label><br>
+        <select id="type_abonnement" name="type_abonnement" required>
+            <option value="mobiel">Mobiel</option>
+            <option value="glasvezel">Glasvezel</option>
+            <option value="tv">TV</option>
+        </select>
+        <br><br>
+
+        <label for="ingangsdatum">Datum van ingang abonnement:</label><br>
+        <input 
+          type="date" 
+          id="ingangsdatum" 
+          name="ingangsdatum" 
+          required>
+        <br><br>
+
+        <label for="looptijd">Looptijd abonnement:</label><br>
+        <select id="looptijd" name="looptijd" required>
+            <option value="" disabled selected>Kies een looptijd...</option>
+            <option value="6">6 maanden</option>
+            <option value="12">12 maanden</option>
+            <option value="24">24 maanden</option>
+            <option value="36">36 maanden</option>
+        </select>
+        <br><br>
+
+        <label for="gebruikers">Aantal gebruikers op het abonnement:</label><br>
+        <input 
+          type="number" 
+          id="gebruikers" 
+          name="gebruikers" 
+          placeholder="1" 
+          min="0" 
+          max="4" 
+          step="1"
+          inputmode="numeric"
+          oninput="if(this.value > 4) this.value = 4; if(this.value < 0) this.value = 0;"
+          required>
+        <br><br>
+
+        <label for="email">E-mailadres:</label><br>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="naam@voorbeeld.nl" 
+          autocomplete="email"
+          required>
+        <br><br>
+
+        <label for="wachtwoord">Wachtwoord aanmaken:</label><br>
+        <input 
+          type="password" 
+          id="wachtwoord" 
+          name="wachtwoord" 
+          required>
+        <br><br>
+
+        <button type="submit">Sluit abonnement af</button>
+    </form>
+
+    <script>
+      document.getElementById('ingangsdatum').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>

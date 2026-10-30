@@ -1,0 +1,47 @@
+*/* 1. Global Box Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Page Dark Theme Base */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #120b1f;
+    color: white;
+}
+
+/* 3. Header Container */
+header {
+    display: flex;
+    justify-content: flex-start; /* Moves navigation content to the far right */
+    align-items: center;      /* Vertically aligns content in the middle */
+    background: linear-gradient(90deg, #12091c 0%, #1a0f2e 50%, #150a21 100%); /* Dark purple gradient */
+    padding: 1.25rem 3rem;    /* Spacing inside header: top/bottom 1.25rem, left/right 3rem */
+    position: sticky;        /* Keeps navbar fixed at the top when scrolling */
+    top: 0;
+    z-index: 1000;           /* Ensures the header stays on top of other elements */
+}
+
+/* 4. Horizontal Menu List */
+nav ul {
+    display: flex;            /* Turns vertical list items into a horizontal row */
+    list-style: none;         /* Removes standard bullet points */
+    gap: 2.25rem;             /* Sets clean spacing between each link */
+    align-items: center;
+}
+
+/* 5. Navigation Link Styles */
+nav a {
+    color: #d1d5db;           /* Light grey text color */
+    text-decoration: none;   /* Removes default underline */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out; /* Smooth hover transition */
+}
+
+/* 6. Hover Effect */
+nav a:hover {
+    color: #ffffff;           /* Text changes to bright white on hover */
+}
