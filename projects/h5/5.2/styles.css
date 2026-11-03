@@ -1,0 +1,324 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ftltl-webfont;
+    src: url(Fonts/ftltlt-webfont.woff);
+}
+
+body {
+    font-family: ftltl-webfont;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+
+/* --- NAVIGATIE BOVENIN --- */
+nav:first-of-type {
+  background-color: #7272dd;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  justify-content: start;
+  gap: 2.5rem;
+  align-items: start;
+  width: 100%;
+}
+
+nav:first-of-type a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: opacity 0.2s ease;
+}
+
+nav:first-of-type a:hover {
+  opacity: 0.8;
+}
+
+/* --- 1E SECTIE (HERO) --- */
+section:nth-of-type(1) {
+  background-color: #000000;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-indicators {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.hero-indicators span {
+  width: 25px;
+  height: 4px;
+  background-color: #555;
+  border-radius: 2px;
+}
+
+.hero-indicators span:first-child {
+  background-color: #9d39ff;
+}
+
+section:nth-of-type(1) h1 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Het "Hi" tekstwolkje */
+.speech-bubble {
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  padding: 2px 16px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+section:nth-of-type(1) p:first-of-type {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 0.8rem;
+}
+
+section:nth-of-type(1) p:nth-of-type(2) {
+  font-size: 1.1rem;
+  color: #aaaaaa;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-purple {
+  background-color: #8c00ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Rechterkant 1e sectie (Telefoon + Cirkel + Badge) */
+.hero-image-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 400px;
+}
+
+.purple-circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: #7272dd;
+  border-radius: 50%;
+  right: -30px;
+  top: -232px;
+  z-index: 1;
+}
+
+.phone-img {
+  height: 380px;
+  width: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.super-deal-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  width: 100px;
+  height: 100px;
+  background-color: #8c00ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  border: 2px solid #000;
+  z-index: 3;
+  transform: rotate(-15deg);
+}
+
+/* --- 2E SECTIE (Mobiel & TV met sticky afbeelding) --- */
+.mobiel-tv-section {
+  background-color: #f5f7fa;
+  color: #333333;
+  padding: 7rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Cruciaal voor sticky */
+  gap: 40px;
+  position: relative;
+}
+
+.mobiel-tv-text {
+  flex: 1;
+}
+
+.mobiel-tv-section h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #111111;
+  margin-bottom: 1.2px;
+}
+
+.mobiel-tv-section p {
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.mobiel-tv-section hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1rem 0;
+}
+
+/* De sticky afbeelding (.patron) */
+.patron {
+  height: 300px;
+  width: auto;
+  position: sticky;
+  top: 40px;
+  flex-shrink: 0;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #7272dd;
+  padding: 2rem 4rem;
+  width: 100%;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-buttons button {
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.cta-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 12px; /* Zorgt voor de mooie afgeronde hoeken */
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  opacity: 0.85;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual dropdown content box */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7272dd; /* Matches your reference image purple */
+    min-width: 200px;
+    padding: 20px;
+    border-bottom-right-radius: 40px; /* Curves the bottom right corner */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+/* Show the dropdown menu when hovering over the service link/container */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Heading inside dropdown */
+.dropdown-menu h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Links inside dropdown */
+.dropdown-menu a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+}
