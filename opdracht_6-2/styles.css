@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: row-reverse; 
+ 
+  gap: 20px; 
+}
+
+.vierkant {
+  width: 200px;
+  height: 200px;
+}
+
+.blauw {
+  background-color: blue;
+}
+
+.zwart {
+  background-color: black;
+}
+
+.rood {
+  background-color: red;
+}
+
+.groen {
+  background-color: green;
+}
